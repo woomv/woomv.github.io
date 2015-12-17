@@ -51,15 +51,31 @@
 
 
 
-<meta name="description" content="吴庆华的博客">
-<meta property="og:type" content="website">
+<meta name="description" content="在MFC Ribbon中EDIT控件的使用标签： MFC
+
+RIBBON界面很有OFFICE风格，但是其中的EDIT等控件的使用于一般的CEDIT不一样
+首先，在RIBBON中放置的EDIT控件是无法直接编辑的，必须对该EDIT控件的ENABLE
+具体入下：
+void C××××View::OnUpdateEdit1(CCmdUI *pCmdUI){    pCmdUI-&amp;gt;Enable(tr">
+<meta property="og:type" content="article">
 <meta property="og:title" content="WOOMV">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://yoursite.com/2015/12/17/在MFC的Ribbon中EDIT控件的使用/index.html">
 <meta property="og:site_name" content="WOOMV">
-<meta property="og:description" content="吴庆华的博客">
+<meta property="og:description" content="在MFC Ribbon中EDIT控件的使用标签： MFC
+
+RIBBON界面很有OFFICE风格，但是其中的EDIT等控件的使用于一般的CEDIT不一样
+首先，在RIBBON中放置的EDIT控件是无法直接编辑的，必须对该EDIT控件的ENABLE
+具体入下：
+void C××××View::OnUpdateEdit1(CCmdUI *pCmdUI){    pCmdUI-&amp;gt;Enable(tr">
+<meta property="og:updated_time" content="2015-12-17T09:02:38.454Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="WOOMV">
-<meta name="twitter:description" content="吴庆华的博客">
+<meta name="twitter:description" content="在MFC Ribbon中EDIT控件的使用标签： MFC
+
+RIBBON界面很有OFFICE风格，但是其中的EDIT等控件的使用于一般的CEDIT不一样
+首先，在RIBBON中放置的EDIT控件是无法直接编辑的，必须对该EDIT控件的ENABLE
+具体入下：
+void C××××View::OnUpdateEdit1(CCmdUI *pCmdUI){    pCmdUI-&amp;gt;Enable(tr">
 
 
 
@@ -71,7 +87,7 @@
   };
 </script>
 
-  <title> Hexo, NexT - WOOMV - 吴庆华的博客 </title>
+  <title>  | WOOMV </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -92,9 +108,7 @@
 
 
 
-  <div class="container one-column 
-   page-home 
-">
+  <div class="container one-column page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -181,15 +195,9 @@
       <div class="main-inner">
         <div id="content" class="content">
           
-  <section id="posts" class="posts-expand">
 
+  <div id="posts" class="posts-expand">
     
-
-    
-    
-
-    
-      
 
   
   
@@ -210,9 +218,6 @@
             
               
                 
-                <a class="post-title-link" href="/2015/12/17/在MFC的Ribbon中EDIT控件的使用/" itemprop="url">
-                  未命名
-                </a>
               
             
           </h1>
@@ -245,10 +250,7 @@
       
 
       
-        
-          <span itemprop="articleBody">
-            
-              <h1 id="u5728MFC_Ribbon_u4E2DEDIT_u63A7_u4EF6_u7684_u4F7F_u7528"><a href="#u5728MFC_Ribbon_u4E2DEDIT_u63A7_u4EF6_u7684_u4F7F_u7528" class="headerlink" title="在MFC Ribbon中EDIT控件的使用"></a>在MFC Ribbon中EDIT控件的使用</h1><p>标签： MFC</p>
+        <span itemprop="articleBody"><h1 id="u5728MFC_Ribbon_u4E2DEDIT_u63A7_u4EF6_u7684_u4F7F_u7528"><a href="#u5728MFC_Ribbon_u4E2DEDIT_u63A7_u4EF6_u7684_u4F7F_u7528" class="headerlink" title="在MFC Ribbon中EDIT控件的使用"></a>在MFC Ribbon中EDIT控件的使用</h1><p>标签： MFC</p>
 <hr>
 <p>RIBBON界面很有OFFICE风格，但是其中的EDIT等控件的使用于一般的CEDIT不一样</p>
 <p>首先，在RIBBON中放置的EDIT控件是无法直接编辑的，必须对该EDIT控件的ENABLE</p>
@@ -257,10 +259,7 @@
 <p>其次，在相应的函数中提取出EDIT中的内容：</p>
 <p>CMainFrame <em> pFrame = (CMainFrame</em>)AfxGetMainWnd();<br>    CMFCRibbonEdit <em>edit = (CMFCRibbonEdit </em>)((pFrame-&gt;m_wndRibbonBar).FindByID(ID_EDIT_1));<br>    ASSERT_VALID(edit);<br>    CString str = edit-&gt;GetEditText();</p>
 <p>这里我偷懒将CMainFrame 中的m_wndRibbonBar改成了public。</p>
-
-            
-          </span>
-        
+</span>
       
     </div>
 
@@ -268,188 +267,32 @@
       
 
       
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
+              <a href="/2015/12/17/更换了新主题/" rel="next" title="">
+                <i class="fa fa-chevron-left"></i> 
+              </a>
             
-              
-                
-                <a class="post-title-link" href="/2015/12/17/更换了新主题/" itemprop="url">
-                  未命名
-                </a>
-              
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
             
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            发表于
-            <time itemprop="dateCreated" datetime="2015-12-17T10:24:10+08:00" content="2015-12-17">
-              2015-12-17
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
       
 
       
-        
-          <span itemprop="articleBody">
-            
-              <h1 id="u66F4_u6362_u4E86_u65B0_u4E3B_u9898"><a href="#u66F4_u6362_u4E86_u65B0_u4E3B_u9898" class="headerlink" title="更换了新主题"></a>更换了新主题</h1><p>标签： hello</p>
-<hr>
-<p>继续学习，更换了NEXT主题，比较简单的那种。</p>
-
-            
-          </span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-      
 
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2015/12/17/感谢知了/" itemprop="url">
-                  未命名
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            发表于
-            <time itemprop="dateCreated" datetime="2015-12-17T09:06:45+08:00" content="2015-12-17">
-              2015-12-17
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody">
-            
-              <h2 id="u611F_u8C22_u77E5_u4E86"><a href="#u611F_u8C22_u77E5_u4E86" class="headerlink" title="感谢知了"></a>感谢知了</h2><p>date: 2015-12-15 20:42:11</p>
-<h2 id="tags_3A_hello"><a href="#tags_3A_hello" class="headerlink" title="tags: hello"></a>tags: hello</h2><blockquote>
-<p>完成了第一个BLOG</p>
-</blockquote>
-<p>本文本用cmd markdown编写完成</p>
-
-            
-          </span>
-        
+    <div class="post-spread">
       
     </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-
-  </section>
-
-  
+  </div>
 
 
         </div>
@@ -458,6 +301,10 @@
 
 
         
+  <div class="comments" id="comments">
+    
+  </div>
+
 
       </div>
 
@@ -478,8 +325,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" src="/images/default_avatar.jpg" alt="wqhua" itemprop="image"/>
           <p class="site-author-name" itemprop="name">wqhua</p>
@@ -524,6 +380,23 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator">
+            <i class="fa fa-angle-double-up"></i>
+          </div>
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#u5728MFC_Ribbon_u4E2DEDIT_u63A7_u4EF6_u7684_u4F7F_u7528"><span class="nav-number">1.</span> <span class="nav-text">在MFC Ribbon中EDIT控件的使用</span></a></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator">
+            <i class="fa fa-angle-double-down"></i>
+          </div>
+        </section>
       
 
     </div>
@@ -594,6 +467,167 @@
   <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
 
   
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.2" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 1 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    motionMiddleWares.sidebar = function () {
+      var $tocContent = $('.post-toc-content');
+      if (CONFIG.sidebar === 'post') {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          displaySidebar();
+        }
+      }
+    };
+  });
+</script>
+
+
 
   <script type="text/javascript" src="/js/bootstrap.js"></script>
 
