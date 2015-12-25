@@ -35,7 +35,7 @@
 <link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="MFC," />
 
 
 
@@ -51,22 +51,31 @@
 
 
 
-<meta name="description" content="更换了新主题标签： hello
-
-继续学习，更换了NEXT主题，比较简单的那种。">
+<meta name="description" content="RIBBON界面很有OFFICE风格，但是其中的EDIT等控件的使用于一般的CEDIT不一样
+首先，在RIBBON中放置的EDIT控件是无法直接编辑的，必须对该EDIT控件的ENABLE
+具体入下：
+void C××××View::OnUpdateEdit1(CCmdUI *pCmdUI){    pCmdUI-&amp;gt;Enable(true);}
+其次，在相应的函数中提取出EDIT中的内容：
+C">
 <meta property="og:type" content="article">
-<meta property="og:title" content="WOOMV">
-<meta property="og:url" content="http://yoursite.com/2015/12/17/更换了新主题/index.html">
+<meta property="og:title" content="在MFC Ribbon中EDIT控件的使用">
+<meta property="og:url" content="http://yoursite.com/2015/12/25/在MFC的Ribbon中EDIT控件的使用/index.html">
 <meta property="og:site_name" content="WOOMV">
-<meta property="og:description" content="更换了新主题标签： hello
-
-继续学习，更换了NEXT主题，比较简单的那种。">
-<meta property="og:updated_time" content="2015-12-17T02:24:10.512Z">
+<meta property="og:description" content="RIBBON界面很有OFFICE风格，但是其中的EDIT等控件的使用于一般的CEDIT不一样
+首先，在RIBBON中放置的EDIT控件是无法直接编辑的，必须对该EDIT控件的ENABLE
+具体入下：
+void C××××View::OnUpdateEdit1(CCmdUI *pCmdUI){    pCmdUI-&amp;gt;Enable(true);}
+其次，在相应的函数中提取出EDIT中的内容：
+C">
+<meta property="og:updated_time" content="2015-12-25T06:34:01.064Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="WOOMV">
-<meta name="twitter:description" content="更换了新主题标签： hello
-
-继续学习，更换了NEXT主题，比较简单的那种。">
+<meta name="twitter:title" content="在MFC Ribbon中EDIT控件的使用">
+<meta name="twitter:description" content="RIBBON界面很有OFFICE风格，但是其中的EDIT等控件的使用于一般的CEDIT不一样
+首先，在RIBBON中放置的EDIT控件是无法直接编辑的，必须对该EDIT控件的ENABLE
+具体入下：
+void C××××View::OnUpdateEdit1(CCmdUI *pCmdUI){    pCmdUI-&amp;gt;Enable(true);}
+其次，在相应的函数中提取出EDIT中的内容：
+C">
 
 
 
@@ -78,7 +87,7 @@
   };
 </script>
 
-  <title>  | WOOMV </title>
+  <title> 在MFC Ribbon中EDIT控件的使用 | WOOMV </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -208,7 +217,7 @@
             
             
               
-                
+                在MFC Ribbon中EDIT控件的使用
               
             
           </h1>
@@ -217,11 +226,26 @@
         <div class="post-meta">
           <span class="post-time">
             发表于
-            <time itemprop="dateCreated" datetime="2015-12-17T10:24:10+08:00" content="2015-12-17">
-              2015-12-17
+            <time itemprop="dateCreated" datetime="2015-12-25T14:34:01+08:00" content="2015-12-25">
+              2015-12-25
             </time>
           </span>
 
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分类于
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/MFC/" itemprop="url" rel="index">
+                    <span itemprop="name">MFC</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
           
 
           
@@ -241,27 +265,37 @@
       
 
       
-        <span itemprop="articleBody"><h1 id="u66F4_u6362_u4E86_u65B0_u4E3B_u9898"><a href="#u66F4_u6362_u4E86_u65B0_u4E3B_u9898" class="headerlink" title="更换了新主题"></a>更换了新主题</h1><p>标签： hello</p>
-<hr>
-<p>继续学习，更换了NEXT主题，比较简单的那种。</p>
+        <span itemprop="articleBody"><p>RIBBON界面很有OFFICE风格，但是其中的EDIT等控件的使用于一般的CEDIT不一样</p>
+<p>首先，在RIBBON中放置的EDIT控件是无法直接编辑的，必须对该EDIT控件的ENABLE</p>
+<p>具体入下：</p>
+<p>void C××××View::OnUpdateEdit1(CCmdUI *pCmdUI)<br>{<br>    pCmdUI-&gt;Enable(true);<br>}</p>
+<p>其次，在相应的函数中提取出EDIT中的内容：</p>
+<p>CMainFrame <em> pFrame = (CMainFrame</em>)AfxGetMainWnd();<br>    CMFCRibbonEdit <em>edit = (CMFCRibbonEdit </em>)((pFrame-&gt;m_wndRibbonBar).FindByID(ID_EDIT_1));<br>    ASSERT_VALID(edit);<br>    CString str = edit-&gt;GetEditText();</p>
+<p>这里我偷懒将CMainFrame 中的m_wndRibbonBar改成了public。</p>
 </span>
       
     </div>
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/MFC/" rel="tag">#MFC</a>
+          
+        </div>
+      
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2015/12/17/更换了新主题/" rel="next" title="">
+                <i class="fa fa-chevron-left"></i> 
+              </a>
+            
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2015/12/25/在MFC的Ribbon中EDIT控件的使用/" rel="prev" title="在MFC Ribbon中EDIT控件的使用">
-                在MFC Ribbon中EDIT控件的使用 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -387,7 +421,7 @@ var duoshuoQuery = {short_name:"woomv"};
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#u66F4_u6362_u4E86_u65B0_u4E3B_u9898"><span class="nav-number">1.</span> <span class="nav-text">更换了新主题</span></a></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
