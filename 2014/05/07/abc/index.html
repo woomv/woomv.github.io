@@ -54,28 +54,34 @@
 <meta name="description" content="RIBBON界面很有OFFICE风格，但是其中的EDIT等控件的使用于一般的CEDIT不一样
 首先，在RIBBON中放置的EDIT控件是无法直接编辑的，必须对该EDIT控件的ENABLE
 具体入下：
-void C××××View::OnUpdateEdit1(CCmdUI *pCmdUI){    pCmdUI-&amp;gt;Enable(true);}
-其次，在相应的函数中提取出EDIT中的内容：
-C">
+void C××××View::OnUpdateEdit1(CCmdUI *pCmdUI)
+{
+    pCmdUI-&amp;gt;Enable(true);
+}
+其次，在相应的函数中提取出EDIT中的内容">
 <meta property="og:type" content="article">
 <meta property="og:title" content="在MFC Ribbon中EDIT控件的使用">
-<meta property="og:url" content="http://yoursite.com/2015/12/25/在MFC的Ribbon中EDIT控件的使用/index.html">
+<meta property="og:url" content="http://yoursite.com/2014/05/07/abc/index.html">
 <meta property="og:site_name" content="WOOMV">
 <meta property="og:description" content="RIBBON界面很有OFFICE风格，但是其中的EDIT等控件的使用于一般的CEDIT不一样
 首先，在RIBBON中放置的EDIT控件是无法直接编辑的，必须对该EDIT控件的ENABLE
 具体入下：
-void C××××View::OnUpdateEdit1(CCmdUI *pCmdUI){    pCmdUI-&amp;gt;Enable(true);}
-其次，在相应的函数中提取出EDIT中的内容：
-C">
-<meta property="og:updated_time" content="2015-12-25T06:34:01.064Z">
+void C××××View::OnUpdateEdit1(CCmdUI *pCmdUI)
+{
+    pCmdUI-&amp;gt;Enable(true);
+}
+其次，在相应的函数中提取出EDIT中的内容">
+<meta property="og:updated_time" content="2014-05-10T10:44:12.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="在MFC Ribbon中EDIT控件的使用">
 <meta name="twitter:description" content="RIBBON界面很有OFFICE风格，但是其中的EDIT等控件的使用于一般的CEDIT不一样
 首先，在RIBBON中放置的EDIT控件是无法直接编辑的，必须对该EDIT控件的ENABLE
 具体入下：
-void C××××View::OnUpdateEdit1(CCmdUI *pCmdUI){    pCmdUI-&amp;gt;Enable(true);}
-其次，在相应的函数中提取出EDIT中的内容：
-C">
+void C××××View::OnUpdateEdit1(CCmdUI *pCmdUI)
+{
+    pCmdUI-&amp;gt;Enable(true);
+}
+其次，在相应的函数中提取出EDIT中的内容">
 
 
 
@@ -226,8 +232,8 @@ C">
         <div class="post-meta">
           <span class="post-time">
             发表于
-            <time itemprop="dateCreated" datetime="2015-12-25T14:34:01+08:00" content="2015-12-25">
-              2015-12-25
+            <time itemprop="dateCreated" datetime="2014-05-07T18:44:12+08:00" content="2014-05-07">
+              2014-05-07
             </time>
           </span>
 
@@ -236,8 +242,8 @@ C">
               &nbsp; | &nbsp; 分类于
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/MFC/" itemprop="url" rel="index">
-                    <span itemprop="name">MFC</span>
+                  <a href="/categories/日志/" itemprop="url" rel="index">
+                    <span itemprop="name">日志</span>
                   </a>
                 </span>
 
@@ -265,13 +271,19 @@ C">
       
 
       
-        <span itemprop="articleBody"><p>RIBBON界面很有OFFICE风格，但是其中的EDIT等控件的使用于一般的CEDIT不一样</p>
+        <span itemprop="articleBody"><p><strong>RIBBON界面</strong>很有OFFICE风格，但是其中的EDIT等控件的使用于一般的CEDIT不一样</p>
 <p>首先，在RIBBON中放置的EDIT控件是无法直接编辑的，必须对该EDIT控件的ENABLE</p>
 <p>具体入下：</p>
-<p>void C××××View::OnUpdateEdit1(CCmdUI *pCmdUI)<br>{<br>    pCmdUI-&gt;Enable(true);<br>}</p>
-<p>其次，在相应的函数中提取出EDIT中的内容：</p>
-<p>CMainFrame <em> pFrame = (CMainFrame</em>)AfxGetMainWnd();<br>    CMFCRibbonEdit <em>edit = (CMFCRibbonEdit </em>)((pFrame-&gt;m_wndRibbonBar).FindByID(ID_EDIT_1));<br>    ASSERT_VALID(edit);<br>    CString str = edit-&gt;GetEditText();</p>
-<p>这里我偷懒将CMainFrame 中的m_wndRibbonBar改成了public。</p>
+<pre><code>void C××××View::OnUpdateEdit1(CCmdUI *pCmdUI)
+{
+    pCmdUI-&gt;Enable(true);
+}
+</code></pre><p>其次，在相应的函数中提取出EDIT中的内容：</p>
+<pre><code>CMainFrame * pFrame = (CMainFrame*)AfxGetMainWnd();
+CMFCRibbonEdit *edit = (CMFCRibbonEdit *)((pFrame-&gt;m_wndRibbonBar).FindByID(ID_EDIT_1));
+ASSERT_VALID(edit);
+CString str = edit-&gt;GetEditText();
+</code></pre><p>这里我偷懒将<code>CMainFrame</code> 中的<code>m_wndRibbonBar</code>改成了<strong>public</strong>。</p>
 </span>
       
     </div>
@@ -289,13 +301,13 @@ C">
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/12/17/更换了新主题/" rel="next" title="">
-                <i class="fa fa-chevron-left"></i> 
-              </a>
-            
           </div>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2015/12/17/更换了新主题/" rel="prev" title="">
+                 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
